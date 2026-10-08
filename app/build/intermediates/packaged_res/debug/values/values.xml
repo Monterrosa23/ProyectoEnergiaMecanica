@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Simulador de Catapulta</string>
+    <string name="btn_disparar">¡Tensar y lanzar!</string>
+    <string name="btn_reiniciar">Reiniciar</string>
+    <string name="label_altura">Altura máxima alcanzada</string>
+    <string name="label_angulo">Ángulo de lanzamiento (θ)</string>
+    <string name="label_ec">Energía cinética del proyectil</string>
+    <string name="label_energia_total">Energía total del sistema</string>
+    <string name="label_epe">Energía potencial elástica de la catapulta</string>
+    <string name="label_epg">Energía potencial gravitatoria</string>
+    <string name="label_k">Constante elástica de la catapulta (k)</string>
+    <string name="label_masa">Masa del proyectil (m)</string>
+    <string name="label_tiempo">Tiempo total de vuelo</string>
+    <string name="label_velocidad">Velocidad inicial del proyectil</string>
+    <string name="label_x">Ángulo de tensión (φ)</string>
+    <string name="unidad_altura">m</string>
+    <string name="unidad_angulo">°</string>
+    <string name="unidad_julios">J</string>
+    <string name="unidad_k">N/m</string>
+    <string name="unidad_masa">kg</string>
+    <string name="unidad_tiempo">s</string>
+    <string name="unidad_velocidad">m/s</string>
+    <string name="unidad_x">m</string>
+    <style name="Theme.SimuladorArco" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+</resources>

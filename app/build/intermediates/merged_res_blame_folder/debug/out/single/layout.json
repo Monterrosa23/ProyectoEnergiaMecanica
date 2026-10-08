@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.simuladorarco.app-mergeDebugResources-30:/layout/activity_main.xml",
+        "source": "com.example.simuladorarco.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jose_\\.gradle\\daemon\\8.2\\com.example.simuladorarco.app-mergeDebugResources-30:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Jose_\\.gradle\\daemon\\8.2\\com.example.simuladorarco.app-main-33:\\layout\\activity_main.xml"
+    }
+]

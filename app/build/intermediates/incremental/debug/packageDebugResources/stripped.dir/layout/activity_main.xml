@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Panel de resultados -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Conservación de la energía mecánica"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+        <!-- Energía potencial elástica de la catapulta -->
+        <TextView
+            android:id="@+id/tvEPE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EPE de la catapulta: 0.00 J"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF6200EE"
+            android:padding="6dp"
+            android:background="#F3E5F5" />
+
+        <!-- Energía cinética del proyectil -->
+        <TextView
+            android:id="@+id/tvEC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EC del proyectil: 0.00 J"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:padding="6dp"
+            android:background="#FFEBEE" />
+
+        <!-- Energía potencial gravitatoria -->
+        <TextView
+            android:id="@+id/tvEPG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EPG del proyectil: 0.00 J"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF008000"
+            android:padding="6dp"
+            android:background="#E8F5E9" />
+
+        <!-- Energía total (siempre constante) -->
+        <TextView
+            android:id="@+id/tvEnergiaTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Energía total: 0.00 J"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:background="#FFF9C4" />
+
+        <TextView
+            android:id="@+id/tvVelocidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Velocidad inicial: 0.00 m/s"
+            android:textSize="16sp"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tvAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Altura máxima: 0.00 m"
+            android:textSize="16sp"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tvTiempo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiempo de vuelo: 0.00 s"
+            android:textSize="16sp"
+            android:padding="4dp" />
+
+        <!-- Vista de simulación -->
+        <com.example.simuladorarco.ArrowView
+            android:id="@+id/arrowView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="8dp"
+            android:background="#B3D9FF" />
+
+        <!-- Control: constante elástica k -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Constante elástica de la catapulta (k)"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekK"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="490"
+                android:progress="10" />
+
+            <TextView
+                android:id="@+id/tvK"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="10 N/m"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- Control: ángulo de tensión φ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ángulo de tensión (φ)"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekX"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="50" />
+
+            <TextView
+                android:id="@+id/tvX"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="0.50"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- Control: masa del proyectil -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masa del proyectil (m)"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekMasa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="45"
+                android:progress="10" />
+
+            <TextView
+                android:id="@+id/tvMasa"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="0.10 kg"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- Botones -->
+        <Button
+            android:id="@+id/btnDisparar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¡Tensar y lanzar!"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnReiniciar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reiniciar"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>
